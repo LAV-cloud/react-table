@@ -1,11 +1,13 @@
+# React Table App
+
 Для запуска SPA (React + typescript)
-# npm start 
+## npm start 
 
 Для запуска JSON-SERVER (вместо БД удобно, быстро) PORT 4200
-# npm run mock
+## npm run mock
 
 Для запуска SPA и JSON-SERVER (использовал concurrently)
-# npm run serve
+## npm run serve
 
 Для стилей SASS
 Для иконок React-icons
