@@ -2,10 +2,10 @@
 # npm start 
 
 Для запуска JSON-SERVER (вместо БД удобно, быстро) PORT 4200
-# npm mock
+# npm run mock
 
 Для запуска SPA и JSON-SERVER (использовал concurrently)
-# npm serve
+# npm run serve
 
 Для стилей SASS
 Для иконок React-icons
