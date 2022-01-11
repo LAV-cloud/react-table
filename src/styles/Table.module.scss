@@ -1,0 +1,100 @@
+@import './Scroll.module.scss';
+
+.table {
+  width: 720px;
+  position: relative;
+  &__notFound {
+    width: 100%;
+    padding: 20px;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  &__scrollSupport {
+    @include scrollBar(
+      6px,
+      500px,
+      rgb(210, 210, 210),
+      rgb(230, 230, 230),
+      20px
+    );
+    margin: 20px 0px;
+  }
+  & table {
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  &__head {
+    width: 100%;
+  }
+  &__body {
+    width: 100%;
+  }
+}
+
+.tableItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &__col {
+    padding: 5px;
+    width: 100%;
+    text-align: start;
+    background-color: rgb(230, 230, 230);
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(220, 220, 220);
+    }
+  }
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &__item {
+    padding: 5px;
+    width: 100%;
+    text-align: start;
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
+  }
+}
+
+.tablePagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  &__page {
+    transition: all 0.2s ease;
+    &_select {
+      background-color: rgb(210, 210, 210);
+    }
+    margin: 0px 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(230, 230, 230);
+    border: none;
+  }
+}
+
+.tableSort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

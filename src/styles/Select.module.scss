@@ -1,0 +1,80 @@
+@import './Scroll.module.scss';
+
+.select {
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__top {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    & svg {
+      transition: transform 0.2s ease;
+      transform: rotateZ(180deg);
+      color: rgba(0, 0, 0, 0.5);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &_err {
+      border: 1px solid red;
+    }
+    &_open {
+      & svg {
+        transform: rotateZ(0deg);
+      }
+    }
+  }
+  &__list {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include scrollBar(
+      6px,
+      150px,
+      rgb(210, 210, 210),
+      rgb(230, 230, 230),
+      20px
+    );
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+  }
+  &__option {
+    width: 100%;
+    text-align: start;
+    padding: 7px 5px;
+    background: none;
+    transition: all 0.2s ease;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__clean {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    font-size: 12px;
+    margin-left: 3px;
+  }
+}
