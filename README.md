@@ -5,7 +5,7 @@
 # npm mock
 
 Для запуска SPA и JSON-SERVER (использовал concurrently)
-# npm run serve
+# npm serve
 
 Для стилей SASS
 Для иконок React-icons
